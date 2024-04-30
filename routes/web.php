@@ -62,3 +62,13 @@ Route::post('uploads/view',[UploadController::class,'uploadFile'])->name('upload
 Route::get('uploads/list',[UploadController::class,'index'])->name('uploads.list');
 Route::get('uploads/{upload}/detail',[UploadController::class,'show'])->name('uploads.detail');
 Route::get('uploads/{upload}/download',[UploadController::class,'download'])->name('uploads.download');
+
+
+Route::get('/examples/column_align', function () {
+    return view('examples/column_align');
+})->name('examples.column_align');
+
+
+Route::get('/examples/index', function () {
+    return view('examples/index');
+})->name('examples.index');
