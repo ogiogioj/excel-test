@@ -20,6 +20,7 @@
                 <p>{{ $board->created_at }}</p>
             </div>
         @endforeach
+        {{ $boards->links() }}
     </div>
 </body>
 </html>

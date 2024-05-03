@@ -50,7 +50,8 @@ class BoardController extends Controller
     {
         $boards = Board::select('body', 'created_at', 'id')
             ->latest()
-            ->get();
+            ->paginate(20);
+
 
         return view('boards.list', ['boards' => $boards]);
     }
@@ -98,6 +99,7 @@ class BoardController extends Controller
     /* Laravel-Excel */
     public function excel()
     {
+
         return Excel::download(new BoardsExport(), 'products.xlsx');
     }
 

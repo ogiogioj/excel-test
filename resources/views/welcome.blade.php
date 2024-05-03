@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -40,6 +42,8 @@
                         <a href="/uploads/view">파일업로드</a>
                         <br>
                         <a href="/uploads/list">이미지목록보기</a>
+                        <br>
+                        <a href="/users/list">회원리스트출력</a>
                     </div>
                 </div>
         </div>

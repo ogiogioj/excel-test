@@ -12,6 +12,10 @@ class BoardsExport implements FromCollection
     */
     public function collection()
     {
+
         return Board::all();
+
     }
+
+
 }

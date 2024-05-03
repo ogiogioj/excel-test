@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\UserController;
 use App\Models\Board;
 
 /*
@@ -72,3 +73,7 @@ Route::get('/examples/column_align', function () {
 Route::get('/examples/index', function () {
     return view('examples/index');
 })->name('examples.index');
+
+
+Route::get('users/list',[UserController::class,'index'])->name('users.list');
+Route::get('users/excel',[UserController::class,'excel'])->name('users.excel');
