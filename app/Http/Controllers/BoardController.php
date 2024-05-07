@@ -6,6 +6,7 @@ use App\Models\Board;
 
 use Illuminate\Http\Request;
 use App\Exports\BoardsExport;
+use App\Exports\ExcelExport;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
@@ -100,7 +101,7 @@ class BoardController extends Controller
     public function excel()
     {
 
-        return Excel::download(new BoardsExport(), 'products.xlsx');
+        return Excel::download(new ExcelExport(Board::class), 'products.xlsx');
     }
 
 

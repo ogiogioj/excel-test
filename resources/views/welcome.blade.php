@@ -44,6 +44,8 @@
                         <a href="/uploads/list">이미지목록보기</a>
                         <br>
                         <a href="/users/list">회원리스트출력</a>
+                        <br>
+                        <a href="/comments/comment">Comment</a>
                     </div>
                 </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -77,3 +78,7 @@ Route::get('/examples/index', function () {
 
 Route::get('users/list',[UserController::class,'index'])->name('users.list');
 Route::get('users/excel',[UserController::class,'excel'])->name('users.excel');
+
+
+Route::get('comments/comment',[CommentController::class,'index'])->name('comments.comment');
+Route::get('comments/excel',[CommentController::class,'excel'])->name('comments.excel');

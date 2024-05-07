@@ -8,6 +8,7 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 
@@ -39,5 +40,13 @@ class UsersExport implements FromCollection, WithHeadings, ShouldAutoSize, WithS
         $sheet->getStyle('A1:F1')->getFont()->setBold(true);
         $sheet->getStyle('A1:F1')->getFont()->setSize(20);
         $sheet->getStyle('A1:F1')->getFill()->applyFromArray(['fillType' => 'solid','rotation' => 0, 'color' => ['rgb' => 'FFFF00'],]);
+        $sheet->getStyle('A2:F34')->applyFromArray([
+            'borders' => [
+                'allBorders' => [
+                        'borderStlye' =>[Border::BORDER_THIN],
+                    'color' => ['argb' => '000000'],
+                ],
+            ],
+ ]);
     }
 }
